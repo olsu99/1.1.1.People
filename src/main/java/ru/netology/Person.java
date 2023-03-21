@@ -56,13 +56,16 @@ public class Person {
     }
 
     public void happyBirthday() {
-        this.age++;
+        if(hasAge()) {
+            this.age++;
+        }
     }
 
     public PersonBuilder newChildBuilder() {
         PersonBuilder childBuilder = new PersonBuilder();
-        childBuilder.setSurname(getSurname());
-        childBuilder.setAddress(getAddress());
+        childBuilder.setSurname(this.surname);
+        childBuilder.setAge(1);
+        childBuilder.setAddress(this.address);
         return childBuilder;
     }
 

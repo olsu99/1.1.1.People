@@ -16,6 +16,15 @@ public class Main {
         mom.happyBirthday();
         System.out.println(mom);
 
+        Person dad = new PersonBuilder()
+                .setName("Андрей")
+                .setSurname("Вольф")
+                .build();
+
+        System.out.println(dad.hasAge());
+        dad.happyBirthday();
+        System.out.println(dad.hasAge());
+
         try {
             // Не хватает обяхательных полей
             new PersonBuilder().build();
